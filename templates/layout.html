@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>AirGantt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+</head>
+    {% include 'header.html' %}
+    <body>
+        {% block body %}
+        {% endblock %}
+        {% include 'javascripts.html' %}
+    </body>
+</html>

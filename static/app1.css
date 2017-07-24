@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=OpenSans|Roboto');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*.scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100vh;
+    width: auto;
+}*/
+
+/*.scroll-item {
+   vertical-align: top;
+   max-width: 500px;
+   display: inline-block;
+}*/
+
+
+
+/*.horizontal-scroll-wrapper {
+  width: 100px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px);
+}
+
+.horizontal-scroll-wrapper > div {
+  width: 100px;
+  height: 100px;
+  transform: rotate(90deg);
+  transform-origin: right top;
+}*/
+
+@import "hint/hint-variables";

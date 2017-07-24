@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if tasks %}
+<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Number">#</abbr></th>
+      <th><abbr title="Task">Task</abbr></th>
+      <th><abbr title="Task">Start</abbr></th>
+      <th><abbr title="Task">Finish</abbr></th>
+      <th><abbr title="Task">Duration</abbr></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for task in tasks %}
+    <tr>
+      <th>{{ loop.index }}</th>
+      <td>{{ task['Task'] }}</td>
+      <td>{{ task['Start'] }}</td>
+      <td>{{ task['Finish'] }}</td>
+      <td>{{ task['Duration'] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

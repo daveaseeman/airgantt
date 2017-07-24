@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    {% if project_list %}
+    <form method="post" action="{{ url_for('gantt') }}">
+        <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+                <div class="select">
+                    <select name="project_select">
+                        <option>- select project -</option>
+                        {% for project in project_list %}
+                        <option value="{{ project }}">{{ project }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <button class="button is-primary" type="submit" value="Submit" id="submit">Submit</button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

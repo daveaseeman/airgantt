@@ -1,0 +1,60 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+</head>
+    <body>
+        {% if gantt_url %}
+        <h2 class="center-align">{{filter_key}}</h2>
+        <div class="video-container valign-wrapper center-align" style="height:100vh;">
+            <iframe frameborder="0" allowfullscreen scrolling="no" src="{{gantt_url}}.embed"></iframe>
+        </div>
+        <p class="center-align flow-text">
+            <a href={{ url_for("about") }}>about</a>
+            <a href={{ url_for("index") }}>home</a>
+        </p>
+        {% else %}
+        <div class="container">
+            <a href="/new"><button class="button is-primary">NEW</button></a>
+            <h1 class="">Enter your Airtable info:</h1><br />
+                <form action="/">
+                    <!-- filter-key -->
+                    <div class="field">
+                        <label class="label" for="filter-key">Filter Key:</label>
+                        <div class="control"><input type="text" id="filter-key" class="input validate" name="filter-key"></div>
+                    </div>
+                    <!-- filter-table -->
+                    <div class="field">
+                        <label class="label" for="filter-table">Filter Table:</label>
+                        <div class="control"><input type="text" id="filter-table" class="input validate" name="filter-table"></div>
+                    </div>
+                    <!-- record-table -->
+                    <div class="field">
+                        <label class="label" for="record-table">Record Table:</label>
+                        <div class="control"><input type="text" id="record-table" class="input validate" name="record-table"></div>
+                    </div>
+                    <!-- base-id -->
+                    <!-- <div class="field">
+                        <label class="label" for="base-id">Base ID:</label>
+                        <div class="control"><input type="text" id="base-id" class="input validate" name="base-id"></div>
+                    </div> -->
+                    <!-- airtable-key -->
+                    <!-- <div class="field">
+                        <label class="label" for="airtable-key">API key:</label>
+                        <div class="control"><input type="text" id="airtable-key" class="input validate" name="airtable-key"></div>
+                    </div> -->
+                    <div class="field">
+                        <button class="button is-primary" type="submit" value="Submit" id="submit">Submit</button>
+                    </div>
+                </form>
+            <p class="">
+                <a href={{ url_for("about") }} class="center-align">about</a>
+            </p>
+        </div>
+        {% endif %}
+        <!-- javascript -->
+        <script src="https://use.fontawesome.com/8f6878caa0.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    </body>
+</html>
