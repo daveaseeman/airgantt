@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
     {% include 'head.html' %}
-    {% include 'header.html' %}
-    <body>
+    <body style="background-color: rgb(252, 252, 252);">
+        {% include 'header.html' %}
         {% block body %}
+        <!-- Page Content -->
         {% endblock %}
         {% include 'javascripts.html' %}
     </body>
