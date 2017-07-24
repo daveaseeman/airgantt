@@ -1,5 +1,5 @@
 from airtable import airtable
-import os
+# import os
 from datetime import datetime as dt
 # from plotly import plotly, figure_factory
 # from dotenv import load_dotenv, find_dotenv
