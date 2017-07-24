@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+    <h1 class="">Enter your Airtable info:</h1><br />
+    <form action="/">
+        <!-- filter-key -->
+        <div class="field">
+            <label class="label" for="filter-key">Filter Key:</label>
+            <div class="control"><input type="text" id="filter-key" class="input validate" name="filter-key"></div>
+        </div>
+        <!-- filter-table -->
+        <div class="field">
+            <label class="label" for="filter-table">Filter Table:</label>
+            <div class="control"><input type="text" id="filter-table" class="input validate" name="filter-table"></div>
+        </div>
+        <!-- record-table -->
+        <div class="field">
+            <label class="label" for="record-table">Record Table:</label>
+            <div class="control"><input type="text" id="record-table" class="input validate" name="record-table"></div>
+        </div>
+        <!-- base-id -->
+        <!-- <div class="field">
+            <label class="label" for="base-id">Base ID:</label>
+            <div class="control"><input type="text" id="base-id" class="input validate" name="base-id"></div>
+        </div> -->
+        <!-- airtable-key -->
+        <!-- <div class="field">
+            <label class="label" for="airtable-key">API key:</label>
+            <div class="control"><input type="text" id="airtable-key" class="input validate" name="airtable-key"></div>
+        </div> -->
+        <div class="field">
+            <button class="button is-primary" type="submit" value="Submit" id="submit">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

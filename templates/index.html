@@ -1,42 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
 <div class="container">
-    <h1 class="">Enter your Airtable info:</h1><br />
-    <form action="/">
-        <!-- filter-key -->
-        <div class="field">
-            <label class="label" for="filter-key">Filter Key:</label>
-            <div class="control"><input type="text" id="filter-key" class="input validate" name="filter-key"></div>
-        </div>
-        <!-- filter-table -->
-        <div class="field">
-            <label class="label" for="filter-table">Filter Table:</label>
-            <div class="control"><input type="text" id="filter-table" class="input validate" name="filter-table"></div>
-        </div>
-        <!-- record-table -->
-        <div class="field">
-            <label class="label" for="record-table">Record Table:</label>
-            <div class="control"><input type="text" id="record-table" class="input validate" name="record-table"></div>
-        </div>
-        <!-- base-id -->
-        <!-- <div class="field">
-            <label class="label" for="base-id">Base ID:</label>
-            <div class="control"><input type="text" id="base-id" class="input validate" name="base-id"></div>
-        </div> -->
-        <!-- airtable-key -->
-        <!-- <div class="field">
-            <label class="label" for="airtable-key">API key:</label>
-            <div class="control"><input type="text" id="airtable-key" class="input validate" name="airtable-key"></div>
-        </div> -->
-        <div class="field">
-            <button class="button is-primary" type="submit" value="Submit" id="submit">Submit</button>
-        </div>
-    </form>
-    <h1>Or create select from a list here:</h1>
-    <a href="/new"><button class="button is-primary">NEW</button></a>
     <p class="">
-        <a href={{ url_for("about") }} class="center-align">about</a>
+        This app uses <a href="https://airtable.com/invite/r/9HSFJ4pA">Airtable</a> data to create a gantt chart for your projects.<br />
+        Just use this <a href="https://airtable.com/invite/l?inviteId=invZUEQO3yeML2Cgr&inviteToken=2f3f51b070650e92fb4a6d5d01aafda0">base</a> as a starting point.
     </p>
 </div>
-{% endif %}
 {% endblock %}
