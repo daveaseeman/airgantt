@@ -1,17 +1,11 @@
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script src="https://use.fontawesome.com/8f6878caa0.js"></script>
-    <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
-</head>
-    <body>
-        <div style="height:100vh;">
-            <h1 class="center-align">About Me:</h1>
-            <p class="center-align flow-text">
-                I built this project for <a href="http://onemonth.com/courses/one-month-python">One Month Python</a><br />
-                <a href={{ url_for('index') }} class="center-align">home</a>
-            </p>
-        </div>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block body %}
+<div style="height:100vh;">
+    <h1 class="center-align">About Airgantt:</h1>
+    <p class="">
+        This app uses <a href="https://airtable.com/invite/r/9HSFJ4pA">Airtable</a> data to create a gantt chart for your projects.<br />
+        Just use this <a href="https://airtable.com/invite/l?inviteId=invZUEQO3yeML2Cgr&inviteToken=2f3f51b070650e92fb4a6d5d01aafda0">base</a> as a starting point.
+        <a href={{ url_for('index') }} class="center-align">home</a>
+    </p>
+</div>
+{% endblock %}

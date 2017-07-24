@@ -1,21 +1,20 @@
 from airtable import airtable
 import os
-from datetime import timedelta as td
 from datetime import datetime as dt
-from plotly import plotly, figure_factory
-from dotenv import load_dotenv, find_dotenv
-load_dotenv(find_dotenv())
+# from plotly import plotly, figure_factory
+# from dotenv import load_dotenv, find_dotenv
+# load_dotenv(find_dotenv())
 
 API_URL = 'https://api.airtable.com/v%s/'
 API_VERSION = '0'
 
 
-def set_credentials():
-    username = os.environ['USERNAME']
-    potly_key = os.environ['PLOTLY_API_KEY']
-    plotly.tools.set_credentials_file(username=username,
-                                      api_key=potly_key)
-    return "credentials set"
+# def set_credentials():
+#     username = os.environ['USERNAME']
+#     potly_key = os.environ['PLOTLY_API_KEY']
+#     plotly.tools.set_credentials_file(username=username,
+#                                       api_key=potly_key)
+#     return "credentials set"
 
 
 def get_base_records(record_table, base_id, airtable_key):
@@ -133,15 +132,15 @@ def get_index_colors(tasks):
     return colors
 
 
-def get_gantt_url(tasks, filter_key):
-    colors = get_index_colors(tasks)
-    filename = str(filter_key)
-    fig = figure_factory.create_gantt(tasks,
-                                      colors=colors,
-                                      index_col='Index',
-                                      show_colorbar=True,
-                                      group_tasks=True)
-    plot_url = plotly.plot(fig,
-                           filename=filename,
-                           auto_open=False)
-    return plot_url
+# def get_gantt_url(tasks, filter_key):
+#     colors = get_index_colors(tasks)
+#     filename = str(filter_key)
+#     fig = figure_factory.create_gantt(tasks,
+#                                       colors=colors,
+#                                       index_col='Index',
+#                                       show_colorbar=True,
+#                                       group_tasks=True)
+#     plot_url = plotly.plot(fig,
+#                            filename=filename,
+#                            auto_open=False)
+#     return plot_url
